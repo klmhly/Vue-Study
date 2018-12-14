@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="todo.css">
+</head>
+
+<body>
+	<div id="app">
+		<input
+			autofocus
+			placeholder="请输入"
+			type="text"
+			class="content"
+			v-model="task.content"
+			@keydown.enter = "addTask"
+		>
+		<ul>
+			<li v-for="(item,index) in tasks" :key="index">
+				<input
+					type="checkbox"
+					:checked="item.finished"
+					@click="changeState(index)"
+				>
+				<span :class="{'finish' : item.finished}">{{item.content}}</span>
+				<button class="del" @click="deleteTask(index)">删除</button>
+			</li>
+		</ul>
+		<p v-if="tasks.length==0">暂时没有任务</p>
+	</div>
+</body>
+<script src="vue.min.js"></script>
+<script>
+	new Vue({
+	  el:'#app',
+	  data:{
+	    task:{
+	      content:'',
+		  finished:false,
+		  deleted:false
+		},
+	    tasks:[]
+	  },
+	  methods:{
+	    //添加
+	    addTask(){
+	      this.tasks.push(this.task)
+		  //重置输入框的内容
+		  this.task = {
+            content:'',
+            finished:false,
+            deleted:false
+		  }
+		},
+		//删除
+		deleteTask(index){
+	      this.tasks.splice(index,1)
+		},
+		//改变状态
+		changeState(index){
+	      curState = this.tasks[index].finished
+			this.tasks[index].finished = !curState
+		}
+	  }
+	})
+</script>
+</html>
