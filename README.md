@@ -10,12 +10,8 @@
 
 **练习知识点**
 
-1、v-model绑定表单元素
-
-2、v-for生成列表
-
-3、v-bind绑定元素的特性：class，checked
-
-4、v-on绑定click（点击），keydown.enter（按下enter键）的事件
-
-5、v-if实现根据条件渲染
+1. v-model绑定表单元素
+2. v-for生成列表
+3. v-bind绑定元素的特性：class，checked
+4. v-on绑定click（点击），keydown.enter（按下enter键）的事件
+5. v-if实现根据条件渲染
