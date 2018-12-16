@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+</head>
+<body>
+	<div id ='app'>
+		<p v-color>我添加了自定义指令，它的作用是字体蓝色</p>
+		<input v-border type="text">
+		<p v-bgc>看看我的背景颜色</p>
+	</div>
+</body>
+<script src="../vue.min.js"></script>
+<script>
+
+	// 一个全局自定义指令
+	Vue.directive('color',{
+	  inserted (el) {
+		el.style.color='blue'
+      }
+	})
+    new Vue({
+      el:'#app',
+	  directives:{
+        border:{
+          inserted (el) {
+            el.style.border = '1px solid green'
+		  }
+		},
+		bgc:{
+          bind (el) {
+            el.style.backgroundColor = '#bbfabb'
+		  }
+		}
+
+	  }
+    })
+</script>
+</html>
