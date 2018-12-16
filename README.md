@@ -57,7 +57,11 @@ directives: {
 
 3. 调用指令的钩子函数
 bind
+
 inserted
+
 update
+
 componentUpdated
+
 unbind
