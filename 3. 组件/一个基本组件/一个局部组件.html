@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一个局部组件</title>
+    <script src="../../vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <component-a></component-a>
+    </div>
+</body>
+<script>
+    var componentA = {
+        template: '<button @click="count++">{{count}}</button>',
+        data (){
+            return{
+                count:1
+            }
+        }
+    }
+
+    var app = new Vue({
+        el:'#app',
+        components:{
+            componentA
+        }
+    })
+</script>
+</html>
