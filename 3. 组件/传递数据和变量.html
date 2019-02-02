@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>传递数据</title>
+
+</head>
+<body>
+    <div id="app">
+        <test-score :score="98" :name="name1"></test-score>
+        <test-score :score="57" :name="name2"></test-score>
+    </div>
+</body>
+<script src="../vue.min.js"></script>
+<script>
+    Vue.component('test-score',{
+        props:['score','name'],
+        template:'<div>{{name}}:你的分数是{{score}}, 这个成绩{{record}}</div>',
+        computed:{
+            record:function () {
+                if(this.score < 60){
+                    msg = '不及格'
+                }
+                else{
+                    msg = '及格了'
+                }
+                return msg
+            }
+        }
+    })
+
+
+    var app = new Vue({
+        el:'#app',
+        data:{
+            name1:'Tom',
+            name2:'Joe'
+        }
+    })
+</script>
+</html>

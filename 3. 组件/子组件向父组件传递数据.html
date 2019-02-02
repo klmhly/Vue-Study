@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通过事件传递</title>
+    <script src="../vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <add-com :a="a" :b="b" @listen_event="handle_event"></add-com>
+        <h3>{{res}}</h3>
+    </div>
+</body>
+<script>
+    Vue.component('add-com',{
+        props:['a','b'],
+        template:'<button @click="add_event">a+b</button>',
+        methods: {
+            add_event:function () {
+                result = 0
+                result =  this.a+this.b
+                this.$emit('listen_event',result)
+            }
+        }
+    })
+    app = new Vue({
+        el:'#app',
+        data(){
+            return {
+                res:0,
+                a:1,
+                b:2
+            }
+        },
+        methods: {
+            handle_event:function (index) {
+                this.res = index
+            }
+        }
+    })
+</script>
+</html>

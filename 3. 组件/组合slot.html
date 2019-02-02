@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组合slot</title>
+    <script src="../vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <translate>
+            <span slot="yuwen"> Chinese</span>
+            <span slot="shuxue"> Math</span>
+            <span slot="yingyu"> English</span>
+        </translate>
+    </div>
+</body>
+<script>
+    Vue.component('translate',{
+        template:'<div>'+
+                '<div>语文：<slot name="yuwen"></slot></div>'+
+                '<div>数学：<slot name="shuxue"></slot></div>'+
+                '<div>英语：<slot name="yingyu"></slot></div>'
+    })
+
+    app = new Vue({
+        el:'#app'
+    })
+</script>
+</html>

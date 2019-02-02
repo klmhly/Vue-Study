@@ -9,17 +9,17 @@
             <sign-in></sign-in>
         </div>
     </body>
-    <script src="../../vue.min.js"></script>
+    <script src="../vue.min.js"></script>
 
     <script>
         // 定义全局组件 sign-in
         Vue.component('sign-in',{
-            data:function () {
+            template:'<button @click="count++">{{count}},</button>',
+            data () {
                 return {
                     count:0
                 }
-            },
-            template:'<button @click="count++">{{count}}</button>'
+            }
         })
 
         // 挂在程序

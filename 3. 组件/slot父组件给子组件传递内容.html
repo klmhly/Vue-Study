@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>slot</title>
+    <script src="../vue.min.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <say-word :name='name1'>
+            <span>这是父组件给的内容</span>
+        </say-word>
+        <say-word :name="name2">
+            <span>今天天气真好！</span>
+        </say-word>
+        <say-word :name="name3">
+            <span>你说的对！</span>
+        </say-word>
+    </div>
+</body>
+<script>
+    Vue.component('say-word',{
+        props:['name'],
+        template:'<div>{{name}} 说：<slot></slot></div>'
+    })
+
+    app = new Vue({
+        el:'#app',
+        data(){
+            return {
+                name1:'Tom',
+                name2:'Joe',
+                name3:'william'
+            }
+        }
+    })
+</script>
+</html>
