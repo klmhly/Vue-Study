@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bus传值</title>
+    <script src="../vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <com-a></com-a>
+        <com-b></com-b>
+    </div>
+</body>
+<script>
+    // step1, 创建总线对象
+    var Bus = new Vue()
+    var comA = {
+        template:'<div>A say: 点击按钮，我给B组件传了一个数据  <button @click="add_data">点我</button></div>',
+        data (){
+            return {
+                result:5
+            }
+        },
+        // step2，a组件定义触发事件并且绑定到总线
+        methods:{
+            add_data () {
+                Bus.$emit('send_data',this.result)
+            }
+        }
+    }
+    var comB = {
+        template:'<div>B say: 我显示A组件给我传递的数据{{res}}</div>',
+        data (){
+            return {
+                res:0
+            }
+        },
+        // step3， b组件a组件是否触发那个事件，并取得数据
+        mounted (){
+            Bus.$on('send_data',(data) => {
+                console.log(data)
+                this.res = data
+            })
+        }
+    }
+
+    app = new Vue({
+        el:'#app',
+        components:{
+            'com-a':comA,
+            'com-b':comB,
+        }
+    })
+</script>
+</html>

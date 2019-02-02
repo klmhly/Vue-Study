@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7921fbf8-c4f2-4f6f-bb81-710937a14f87" name="Default" comment="" />
+    <list default="true" id="7921fbf8-c4f2-4f6f-bb81-710937a14f87" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/3. 组件/组件通过Bus传递数据.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -52,11 +55,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/3. 组件/组合slot.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+            <state relative-caret-position="242">
+              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/3. 组件/组件通过Bus传递数据.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="520">
+              <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -127,6 +139,7 @@
         <option value="$PROJECT_DIR$/3. 组件/一个全局组件.html" />
         <option value="$PROJECT_DIR$/3. 组件/slot父组件给子组件传递内容.html" />
         <option value="$PROJECT_DIR$/3. 组件/组合slot.html" />
+        <option value="$PROJECT_DIR$/3. 组件/组件通过Bus传递数据.html" />
       </list>
     </option>
   </component>
@@ -250,12 +263,12 @@
       <workItem from="1544699791147" duration="12466000" />
       <workItem from="1549085973802" duration="2868000" />
       <workItem from="1549089008126" duration="1786000" />
-      <workItem from="1549091477545" duration="2989000" />
+      <workItem from="1549091477545" duration="5409000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20109000" />
+    <option name="totallyTimeSpent" value="22529000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -359,8 +372,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/3. 组件/组合slot.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        <state relative-caret-position="242">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/3. 组件/组件通过Bus传递数据.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
         </state>
       </provider>
     </entry>
