@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery todolist</title>
+</head>
+<body>
+    <input type="text" id="txt">
+    <ul id="lists"></ul>
+    <button id="btn">提交</button>
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+    var $txt = $('#txt');
+    var $ul = $('#lists');
+    var $btn = $('#btn')
+    $btn.click(function () {
+        var txt = $txt.val();
+        if(!txt){
+            return
+        }
+
+        var $li = $('<li>'+ txt +'</li>')
+        $ul.append($li)
+        $txt.val('')
+    })
+</script>
+
+</html>

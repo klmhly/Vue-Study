@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="txt">
+        <ul >
+            <li v-for="item in lists">{{item}}</li>
+        </ul>
+        <button @click="addList">提交</button>
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.6.4/vue.min.js"></script>
+<script>
+    app = new  Vue({
+        el: '#app',
+        data(){
+            return {
+                txt:'',
+                lists:[]
+            }
+        },
+        methods:{
+            addList () {
+                this.lists.push(this.txt);
+                this.txt = ''
+            }
+        }
+    })
+
+</script>
+</html>
