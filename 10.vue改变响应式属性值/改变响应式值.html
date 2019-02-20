@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <div id="app">
+        <p>{{a}}</p>
+        <p>{{b}}</p>
+        <button @click="changeData">改变数据</button>
+    </div>
+
+</body>
+<script src="vue.min.js"></script>
+<script>
+    app = new Vue({
+        el:'#app',
+        data (){
+            return {
+                a:[1,2,3],
+                b:{
+                    name:'nick',
+                    age:19
+                }
+            }
+        },
+        methods:{
+            changeData(){
+                Vue.set(this.a,0,'hello')
+                Vue.set(this.b,'age',10)
+                Vue.set(this.b,'grade','A')
+            }
+        }
+    })
+</script>
+</html>
